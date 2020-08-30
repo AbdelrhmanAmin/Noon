@@ -1,0 +1,199 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+a,
+i {
+  cursor: pointer;
+}
+#colorBox {
+  display: flex;
+  padding: 4px;
+  border: 1px solid #e2e5f1;
+  border-radius: 3px;
+  max-width: 90px;
+  margin: 0;
+  font-size: 0.91666667rem !important;
+  align-items: center;
+}
+#colorBox:hover {
+  border-color: #3866df;
+}
+#info-color {
+  margin-left: 5px;
+  font-size: 12px;
+}
+#container {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 8px 0 0 0;
+}
+#heading {
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#headCtr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+#colorGrider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 30px;
+
+  font-size: 12px;
+}
+#checkbox-container {
+  padding: 8px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 12px;
+}
+#checkbox-container:hover {
+  color: #3866df;
+}
+#drawer {
+  display: grid;
+}
+#left-row {
+  justify-content: flex-start;
+  display: flex;
+  width: 100%;
+  padding: 0 0px 0 30px;
+  align-items: center;
+}
+#right-row {
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+  padding: 0 30px 0 0px;
+  align-items: center;
+}
+#left-row span {
+  margin-left: 10px;
+}
+#input-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0px 0 30px;
+  width: 100%;
+  font-size: 12px;
+}
+nav {
+  padding: 30px 0px 0 30px;
+  cursor: pointer;
+  color: rgb(170, 170, 170);
+  font-size: 12px;
+}
+span:hover {
+  color: black;
+}
+nav > span:last-child {
+  color: black;
+}
+#textInput {
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-size: 0.833333rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0;
+  max-width: 20%;
+  border: 1px solid #e2e5f1;
+  margin: 0 10px;
+}
+#colorSvg {
+  height: 30px;
+}
+h1 {
+  font-size: 1.5rem;
+}
