@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "./style.css";
+let obj = {};
 class Facets extends Component {
   clicker = (e) => {
     const parent = Array.from(
       e.target.parentNode.parentNode.parentNode.parentNode.childNodes
     );
+    let head = parent[0].childNodes[0].lastElementChild.childNodes[0];
+
     for (let div of parent) {
       if (div.id != "heading") {
-        console.log(div.style);
         if (
           div.style.display === "grid" ||
           div.style.display === "block" ||
@@ -15,12 +17,16 @@ class Facets extends Component {
           div.style.display === ""
         ) {
           div.style.display = "none";
+          head.className = "fa fa-angle-down fa-2x";
         } else {
           div.style.display = "grid";
+          head.className = "fa fa-angle-up fa-2x";
         }
       }
     }
   };
+
+ 
   render() {
     const isObject = function (a) {
       return !!a && a.constructor === Object;
@@ -38,7 +44,7 @@ class Facets extends Component {
                         <h1>{facet.name}</h1>
                         <a onClick={this.clicker}>
                           <i
-                            className="fa fa-angle-down fa-2x"
+                            className="fa fa-angle-up fa-2x"
                             aria-hidden="true"
                           ></i>
                         </a>
@@ -68,12 +74,37 @@ class Facets extends Component {
                       {facet.data.map((x) => {
                         if (
                           facet.name != "Colour" &&
-                          facet.name != "Fulfillment"
+                          facet.name != "Fulfillment" &&
+                          facet.name != "Category"
                         ) {
+                          console.log(x.code);
                           return (
                             <label id="checkbox-container">
                               <div id="left-row">
-                                <input type="checkbox" />
+                                <input
+                                  type="checkbox"
+                                  onClick={() =>
+                                    this.filterKeys([facet.code, x.code])
+                                  }
+                                />
+                                <span>{x.name}</span>
+                              </div>
+                              <div id="right-row">({x.count})</div>
+                            </label>
+                          );
+                        }
+                      })}
+                      {facet.data.map((x) => {
+                        if (
+                          facet.name != "Colour" &&
+                          facet.name != "Brand" &&
+                          facet.name != "Fulfillment" &&
+                          facet.name != "New Arrivals"
+                        ) {
+                          console.log(x.code);
+                          return (
+                            <label id="checkbox-container">
+                              <div id="left-row">
                                 <span>{x.name}</span>
                               </div>
                               <div id="right-row">({x.count})</div>
